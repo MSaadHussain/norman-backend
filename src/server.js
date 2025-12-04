@@ -15,7 +15,6 @@ app.use(express.json());
 // Base API path: /api
 app.use('/api', apiRoutes);
 
-app.listen(port, () => {
-  console.log(`Strath-Air backend API listening on port ${port}`);
-  console.log('Base URL for clients: http://localhost:' + port + '/api');
+app.listen(port, "0.0.0.0", () => {
+  console.log(`Server running on http://0.0.0.0:${port}/api`);
 });
